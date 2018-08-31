@@ -10,10 +10,14 @@
   <mat-list-item role="listitem">Rxjs version: 6.2.2</mat-list-item>
   <mat-list-item role="listitem">Ngrx store version: 6.0.1</mat-list-item>
 </mat-list>  
-<div class="input-container">
-  <mat-form-field>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
-</div>
+
+
+<span>
+  <ngx-datatable
+  [rows]="rows"
+  [columns]="columns">
+</ngx-datatable>
+</span>
+
 
 </div>
