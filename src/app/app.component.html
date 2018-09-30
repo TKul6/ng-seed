@@ -3,17 +3,26 @@
   <h1>
     Angular seed project
   </h1>
-<mat-list role="list">
-  <mat-list-item role="listitem">Angular version: 6.0.8</mat-list-item>
-  <mat-list-item role="listitem">Material version: 6.4.0</mat-list-item>
-  <mat-list-item role="listitem">Typescript version: 2.7.2</mat-list-item>
-  <mat-list-item role="listitem">Rxjs version: 6.2.2</mat-list-item>
-  <mat-list-item role="listitem">Ngrx store version: 6.0.1</mat-list-item>
-</mat-list>  
-<div class="input-container">
-  <mat-form-field>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
+  <mat-list role="list">
+   <mat-list-item role="listitem">Angular version: 6.0.8</mat-list-item>
+   <mat-list-item role="listitem">Material version: 6.4.0</mat-list-item>
+   <mat-list-item role="listitem">Typescript version: 2.7.2</mat-list-item>
+   <mat-list-item role="listitem">Rxjs version: 6.2.2</mat-list-item>
+   <mat-list-item role="listitem">Ngrx store version: 6.0.1</mat-list-item>
+  </mat-list>  
+
+  <div class="flex-container">
+    <mat-form-field>
+      <input matInput placeholder="Enter text here" #displayText />
+    </mat-form-field>
+    <button mat-button style="padding-left:16px" (click)="generateImage(displayText.value)">GENERATE</button>
+  </div>
+    <h1>Result:</h1>
+    <img *ngIf="safeImageUrl !== null" [src]="dataUrl" />
+    <div style="width: 400px" class="url-container">
+    {{dataUrl !== ''? 'url created': 'url is blank'}}
+  </div>
+  <div (dragstart)="addImage($event)">drag me</div>
+  <IMG (dragstart)="addImage($event)"  SRC="../assets/IMG_3264.JPG"  height="200px" width="auto">
 </div>
 
-</div>
