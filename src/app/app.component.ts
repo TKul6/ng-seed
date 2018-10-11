@@ -23,10 +23,10 @@ export class AppComponent {
     canvas.width = context.measureText(text).width + 80;
     context.fillStyle = '#ffffcc';
     context.shadowColor = '#b8b8b8';
-    context.shadowBlur = 50;
+    context.shadowBlur = 3;
     context.shadowOffsetX = 2;
     context.shadowOffsetY = 2.3;
-    context.fillRect(0, 0, canvas.width - 10, canvas.height - 10);
+    context.fillRect(0, 0, canvas.width - 10, 40);
 
     const textContext = canvas.getContext('2d');
 
@@ -36,7 +36,7 @@ export class AppComponent {
     textContext.shadowBlur = 0;
     textContext.shadowOffsetX = 0;
     textContext.shadowOffsetY = 0;
-    textContext.fillText(text, 16, canvas.height / 2 + 4);
+    textContext.fillText(text, 16, canvas.height / 2 + 3);
     this.dataUrl = canvas.toDataURL('image/png');
     this.safeImageUrl = this.santizier.bypassSecurityTrustUrl(this.dataUrl);
   }
