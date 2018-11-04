@@ -1,10 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatListModule, MatFormFieldModule, MatInputModule} from '@angular/material';
-
+import {MatListModule, MatFormFieldModule, MatInputModule, MatIconModule, MatIconRegistry} from '@angular/material';
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +14,22 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatListModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatIconModule,
+    HttpClientModule       
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+
+    iconRegistry.addSvgIcon('sync_folder', sanitizer.bypassSecurityTrustResourceUrl('../assets/2-colors.svg'));
+
+
+}
+
+
+}

@@ -3,3 +3,19 @@
     width: 250px;
     background-color: black;
 }
+
+.my-icon{
+    height: 60px;
+    width: 60px;
+
+    }
+
+.my-icon svg {
+    fill: black;
+    
+}
+
+#Layer_7 {
+color: green;
+    fill:currentColor !important;
+}
