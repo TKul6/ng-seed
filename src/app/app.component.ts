@@ -9,4 +9,10 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class AppComponent {
 
+  resourceSelected = false;
+
+  toggleIconSelection() {
+    this.resourceSelected = !this.resourceSelected;
+  }
+
 }

@@ -11,7 +11,10 @@
   <mat-list-item role="listitem">Ngrx store version: 6.0.1</mat-list-item>
 </mat-list>  
 
-<mat-icon svgIcon="sync_folder" class="my-icon"></mat-icon>
+<mat-icon svgIcon="sync_folder" class="my-icon a"  [ngClass]="{'selected-resource': resourceSelected, 'reg-icon': !resourceSelected}"></mat-icon>
 
-
+<span class="flex-container flex-center">
+<span>Resource is {{resourceSelected? "selected": "not selected"}}</span>
+<button mat-button (click)="toggleIconSelection()">Toggle button selection</button>
+</span>
 </div>

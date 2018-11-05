@@ -1,7 +1,10 @@
-.input-container {
-    height: 150px;
-    width: 250px;
-    background-color: black;
+.flex-container{
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
 }
 
 .my-icon{
@@ -10,12 +13,12 @@
 
     }
 
-.my-icon svg {
-    fill: black;
-    
+
+.reg-icon #sync {
+    color: green;
+    fill:currentColor;
 }
 
-#Layer_7 {
-color: green;
-    fill:currentColor !important;
+.selected-resource {
+    color: cornflowerblue;
 }
