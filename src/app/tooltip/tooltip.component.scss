@@ -1,0 +1,25 @@
+.tooltip-container {
+    box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 0.4);
+    background-color: #fffff8;
+    overflow-y: auto ;
+    border-radius: 4px;
+    max-width: 450px;
+    max-height: 132px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: block;
+    color: rgba(0, 0, 0, 0.87);
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.tooltip-container::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
