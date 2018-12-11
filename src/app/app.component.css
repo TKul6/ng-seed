@@ -1,5 +1,9 @@
-.input-container {
-    height: 150px;
-    width: 250px;
-    background-color: black;
-}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+      /*! autoprefixer: ignore next */
+    -webkit-box-orient: vertical;  
+    width: 300px;
+    height: 42px;
+    overflow: hidden;
+  }
