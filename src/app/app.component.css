@@ -2,4 +2,28 @@
     height: 150px;
     width: 250px;
     background-color: black;
+
+}
+
+.item {
+    height: 100px;
+    width: 300px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: background-color 300ms, color 450ms;  /* For Safari 3.1 to 6.0 */
+    transition-timing-function: ease-in-out;
+    transition: background-color 300ms, color 450ms;
+
+    cursor: pointer;
+}
+
+.item:hover, .item.selected {
+background-color: red;
+color: white;
+}
+
+.item.selected {
+    font-weight: 500;
 }
